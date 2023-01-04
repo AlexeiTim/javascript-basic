@@ -1,1 +1,5 @@
-console.log('Hello world')
+let a = 1;
+console.log(a);
+
+a = 'test';
+console.log(a);
