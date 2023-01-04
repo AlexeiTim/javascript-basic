@@ -1,19 +1,15 @@
-let a = 5;
-let b = 5.6;
-console.log(typeof a);
-console.log(typeof b);
-a = 'строка';
-console.log(typeof a);
-e = `sadasd`;
-console.log(typeof e);
+// const hoursPerDay = 5;
+// const daysPerWeek = 5;
+// const daysForWork = 11 - 7 + 5;
+// console.log(daysForWork * 5 >= 40);
+// const price = daysForWork  * 80;
+// console.log(price + '$');
 
-let isAdmin = a > 10;
-console.log(typeof isAdmin);
+//Данные
+const payRateUSD = 80;
+const projectHours = 40;
+const availableHours = (11 - 2) * 5;
 
-let c;
-console.log(typeof c);
-c = 5;
-console.log(typeof c);
-
-let d = null;
-console.log(d == null);
+//Результат
+console.log('Смогу ли я работать? ' + (availableHours > projectHours));
+console.log('Стоимость работ? ' + (projectHours * payRateUSD + '$'));
