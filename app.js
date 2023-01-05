@@ -9,12 +9,18 @@ const operations = [100, -20, 7, -20, 50];
 
 // console.log(positiveOperation);
 
-const positiveOperation = operations.filter(operation => operation > 0);
-console.log(positiveOperation);
+const prices = [[100, 200], [120, 100], [200, 350]];
 
-const positiveRUBOperations = operations
-  .filter(operation => operation > 0)
-  .map(operation => operation * 60);
+// const positiveChangingOfPrice = prices
+//   .filter(el => {
+//     return el[0] < el[1]
+//   })
+//   .map(el => {
+//     return el[1] - el[0]
+//   })
 
+const positiveChangingOfPrice = prices
+  .map(el => el[1] - el[0])
+  .filter(el => el > 0);
 
-console.log(positiveRUBOperations)
+console.log(positiveChangingOfPrice);
