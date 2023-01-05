@@ -1,10 +1,17 @@
 const arr = [2, 4, 4, 10];
-const average = arr.reduce((acc, el, i) => {
-  if (i != arr.length - 1) {
-    return acc += el;
-  } else {
-    return (acc + el) / 2
-  }
-}, 0);
 
-console.log(average);
+let elGT5;
+for (const el of arr) {
+  if (el > 5) {
+    elGT5 = el
+    break
+  }
+}
+
+// console.log(elGT5)
+
+elGT5 = arr.find(el => el > 5);
+elGT5Index = arr.findIndex(el => el < 0);
+
+console.log(elGT5)
+console.log(elGT5Index)
