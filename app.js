@@ -1,11 +1,18 @@
-const userName = 'Вася aka Terminator Пупкин';
+const str = 'Вася Пупкина';
+console.log(str.includes('а'));
+console.log(str.startsWith('В'));
+console.log(str.endsWith('н'));
+console.log(new String('asdasd').includes('a'));
 
-const nameFromArray = userName.split(' ')
-console.log(nameFromArray[0] + ' ' + nameFromArray.at(-1))
+console.log(str.toLowerCase());
+console.log(str.toUpperCase());
+
+// console.log(str.replace('а', 'и'));
+// console.log(str.replaceAll('а', 'и'));
+
+console.log(str.replace(/а/g, 'и'));
+
+const str2 = ' Вася Пупкина    \n';
+console.log(str2.trim())
 
 
-const nameWithMethodOfString = userName.slice(0, 5) + userName.slice(-6)
-console.log(nameWithMethodOfString);
-
-const useName = userName.slice(0, userName.indexOf(' ')) + userName.slice(userName.lastIndexOf(' '))
-console.log(useName);
