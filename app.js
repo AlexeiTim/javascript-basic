@@ -1,12 +1,25 @@
-const bmwX3Price = 100000;
-const fordFocusPrice = 10000;
-const budget = 10005;
+const value = prompt('Сколько будет 7 + или - 15?');
 
-let message = budget > 100000
-  ? 'BMW'
-  : budget > fordFocusPrice
-    ? 'Ford'
-    : 'Велосипед';
+switch (true) {
+  case Number(value) === 22:
+  case Number(value) === -8:
+  case value === 'Я не робот':
+    console.log('Успех');
+    break
+  default:
+    console.log('Вы робот');
+}
 
-
-console.log(`Я хочу купить ${message}`)
+if (value === 'Я не робот') {
+  console.log('Успех')
+} else {
+  const numValue = Number(value)
+  switch (numValue) {
+    case 22:
+    case -8:
+      console.log('Успех')
+      break
+    default:
+      console.log('Вы робот');
+  }
+}
