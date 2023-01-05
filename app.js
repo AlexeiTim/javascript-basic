@@ -1,48 +1,24 @@
-const wallet = {
-  balance: 0,
-  operations: [],
-  addBalance: function (value) {
-    this.balance += value;
-    this.operations.push({
-      reason: 'Пополнение',
-      sum: value,
-    });
-    console.log('Успешно пополнено')
-    return true;
+// Итерирование по объекту
+
+const cities = {
+  msk: {
+    lt: 200,
+    temp: 25,
   },
-  minusBalance: function (value) {
-    if (this.balance >= value) {
-      this.balance -= value;
-      this.operations.push({
-        reason: 'Оплата налогов',
-        sum: -value,
-      });
-      console.log('Успешно оплачено');
-      return true
-    }
-    console.log('Недостаточно средств, ваш баланс: ' + this.balance);
-    return false
+  spb: {
+    lt: 100,
+    temp: 20,
   },
-  watchOperationsLength: function () {
-    console.log(this.operations.length);
-    return this.operations.length;
-  }
 };
-wallet.addBalance(100);
-console.log(wallet);
-wallet.addBalance(200);
-wallet.addBalance(500);
-wallet.watchOperationsLength();
-wallet.minusBalance(100);
-wallet.minusBalance(100);
-wallet.minusBalance(100);
-wallet.minusBalance(100);
-wallet.minusBalance(100);
-wallet.minusBalance(100);
-wallet.minusBalance(100);
-wallet.minusBalance(100);
-wallet.watchOperationsLength();
-console.log(wallet);
+let sumTemp = 0;
+let citiesCount = Object.keys(cities).length
+for (const key in cities) {
+  citiesCount++;
+  sumTemp += cities[key].temp;
+};
+console.log(sumTemp / citiesCount);
 
-
+for (const key of Object.keys(cities)) {
+  console.log(key);
+}
 
