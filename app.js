@@ -1,15 +1,20 @@
-const transactionInUSD = [10, -7, 50, -10, 100];
-const transactionInRUB = [];
-for (const transaction of transactionInUSD) {
-  transactionInRUB.push(transaction * 60);
-}
+const operations = [100, -20, 7, -20, 50];
 
-console.log(transactionInRUB);
+// const positiveOperation = [];
+// for (const operation of operations) {
+//   if (operation > 0) {
+//     positiveOperation.push(operation);
+//   }
+// }
 
-const transactionInRUBMap = transactionInUSD
-  .map((transition, i) => {
-    console.log(i);
-    return transition * 60
-  });
-console.log(transactionInUSD);
-console.log(transactionInRUBMap);
+// console.log(positiveOperation);
+
+const positiveOperation = operations.filter(operation => operation > 0);
+console.log(positiveOperation);
+
+const positiveRUBOperations = operations
+  .filter(operation => operation > 0)
+  .map(operation => operation * 60);
+
+
+console.log(positiveRUBOperations)
