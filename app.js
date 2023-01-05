@@ -1,49 +1,25 @@
-const operations = [1000, -700, 300, -500, 10000];
+function add(a, b) {
+  return a + b;
+};
 
-const resultBalance = arr => {
-  let balance = 100;
-  for (let element of operations) {
-    balance += element;
-  };
-  return balance;
+function subtract(a, b) {
+  return a - b;
+};
+
+function power(a, b) {
+  return a ** b;
 }
-const countMoney = arr => {
-  let result = 100;
-  let isOk = true;
-  for (let element of arr) {
-    result += element;
-    if (result < 0) {
-      isOk = false;
-      break
-    }
-  }
-  return isOk;
-}
+// Функция высшего порядка
 
-const getAdvancedSumOfAdded = arr => {
-  let added = [];
-  let odd = [];
-  for (let element of operations) {
-    element < 0 ? odd.push(element) : added.push(element);
-  }
-  let resultAdded = 0;
-  for (let element of added) {
-    resultAdded += element;
-  }
+function calculate(a, b, fn) {
+  console.log(fn.name);
+  const result = fn(a, b);
+  return result;
+};
 
-  let resultOdd = 0;
-  for (let element of odd) {
-    resultOdd += element;
-  }
-  resultOdd = resultOdd / odd.length;
-  resultAdded = resultAdded / added.length;
-  console.log(`Средний доход : ${resultAdded}`);
-  console.log(`Средний расход : ${resultOdd}`);
-}
-
-console.log(resultBalance(operations));
-console.log(countMoney(operations));
-getAdvancedSumOfAdded(operations);
-
-
-
+const res1 = calculate(3, 5, add);
+console.log(res1);
+const res = calculate(3, 5, subtract);
+console.log(res);
+const res3 = calculate(3, 5, power);
+console.log(res3);
