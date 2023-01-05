@@ -1,18 +1,15 @@
-'use strict';
+'use strict'
+// IIFE;
 
-function removePassword(reset) {
-  if (reset) {
-    this.password = undefined;
-  } else {
-    this.password = '1';
-  }
-};
+function init() {
+  console.log('Start');
+}
 
+init();
 
-const user = {
-  password: '123123123'
-};
+(function () {
+  console.log('Start IIFO');
+  const a = 1;
+})()
 
-const remove = removePassword.bind(user, true);
-remove();
-console.log(user);
+console.log(a);
