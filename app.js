@@ -1,20 +1,29 @@
-const KG_IN_USD = 7;
-const KM_IN_USD = 5;
+const age = 25;
+const haveJob = false;
+const money = 2000;
 
-function calculateW(present) {
-  return present * KG_IN_USD;
+const priceMacBook = 2000;
+
+
+function canGetCredit(age, job = false) {
+  const countCredit = age > 24 && job
+    ? 500
+    : age > 24
+      ? 100
+      : 0;
+  return countCredit;
+};
+
+function canBuyMacBook(money, price) {
+  const checking = money >= price ? true : false;
+  return checking;
 }
 
-function calculateKm(distance) {
-  return distance * KM_IN_USD;
-}
-
-function getExchangePrice(present1, present2, distance) {
-  const price1 = calculateW(present1);
-  const price2 = calculateW(present2);
-  const priceDistance = calculateKm(distance);
-  return price1 + price2 + priceDistance;
+function tryToGetMacBook(age, money, priceMacBook, haveJob = false) {
+  const additionalMoney = canGetCredit(age, haveJob);
+  const allMoney = money + additionalMoney;
+  return canBuyMacBook(allMoney, priceMacBook);
 };
 
 
-console.log(getExchangePrice(5, 7, 20))
+console.log(tryToGetMacBook(age, money, priceMacBook, haveJob));
