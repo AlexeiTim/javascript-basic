@@ -1,17 +1,36 @@
-'use strict'
+const company = {
+  name: 'ООО Агро',
+  employees: [
+    {
+      name: 'Света',
+      getEmployeesName: function () {
+        console.log(this.name);
+        return this.name
+      },
+    },
+    {
+      name: 'Катя',
+      getEmployeesName: function () {
+        console.log(this.name);
+        return this.name
+      },
+    },
+  ],
+  ceo: {
+    name: 'Вася',
+    getCeoName: function () {
+      let name = this.name;
+      console.log(name);
+    }
+  },
+  getCompany: function () {
+    console.log(`Название компании: ${this.name}`)
+    return this.name
+  },
 
-// let, vat, const, func, arguments
-// Scope chain
-// this
 
-function sumNum(num1, num2) {
-  console.log(arguments);
-  return num1 + num2;
 }
 
-const sumNumArrow = (num1, num2) => {
-  // console.log(arguments); // нету this и arguments
-  return num1 + num2;
-}
-console.log(sumNumArrow(1, 3))
-console.log(sumNum(1, 4, 3, 7));
+company.ceo.getCeoName();
+console.log(company.employees.map(employee => employee.getEmployeesName()))
+company.getCompany();
