@@ -1,24 +1,21 @@
-// Итерирование по объекту
-
-const cities = {
-  msk: {
-    lt: 200,
-    temp: 25,
-  },
-  spb: {
-    lt: 100,
-    temp: 20,
-  },
-};
-let sumTemp = 0;
-let citiesCount = Object.keys(cities).length
-for (const key in cities) {
-  citiesCount++;
-  sumTemp += cities[key].temp;
-};
-console.log(sumTemp / citiesCount);
-
-for (const key of Object.keys(cities)) {
-  console.log(key);
+const user = {
+  name: 'Вася',
+  age: 40,
+  city: 'Moscow',
 }
 
+const { age, ...userWithoutAge } = user;
+
+console.log(age, userWithoutAge);
+
+const additionalData = {
+  skills: ['Разработка', 'Дизайн'],
+  creditCart: '2342-2354-2734-2634',
+};
+user.test = 'sasd';
+
+// user = {
+//   ...user,
+//   ...additionalData,
+// }
+console.log(user);
