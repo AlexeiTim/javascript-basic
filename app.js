@@ -1,27 +1,18 @@
-'use strict'
+'use strict';
 
-const audi = {
-  make: 'Audi',
-  model: 'A3',
-  damages: []
+function removePassword(reset) {
+  if (reset) {
+    this.password = undefined;
+  } else {
+    this.password = '1';
+  }
 };
 
 
-const carManipulation = {
-  addDamage(part, rate) {
-    this.damages.push({
-      part,
-      rate
-    });
-    console.log(`Добавили повреждение на ${this.make} ${this.model}`);
-  }
-}
+const user = {
+  password: '123123123'
+};
 
-const addDamageAudi = carManipulation.addDamage.bind(audi);
-addDamageAudi('Крыло', 3);
-console.log(audi);
-
-const addDamageAudiRoof = carManipulation.addDamage.bind(audi, 'Крыша');
-addDamageAudiRoof(5);
-console.log(audi);
-
+const remove = removePassword.bind(user, true);
+remove();
+console.log(user);
