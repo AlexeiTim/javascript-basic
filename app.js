@@ -1,23 +1,14 @@
-
-// let i = 1;
-// while (i <= 5) {
-
-//   console.log(i);
-//   i++
-// }
-
-
 const arr = [1, 4, 8, 7];
 
+for (let i = 0; i < arr.length; i++) {
+  console.log(arr[i]);
+};
 
-let i = 0;
-while (arr[i] <= 5 && i < arr.length) {
-  console.log(arr[i])
-  i++
+
+for (let element of arr) {
+  console.log(element);
 }
 
-let j = 0;
-do {
-  console.log(j)
-  j++
-} while (j < 0)
+for (let index in arr) {
+  console.log(arr[index]);
+}
