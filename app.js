@@ -1,5 +1,9 @@
-let username = '';
-console.log(username || 'Default Username');
-console.log(username ?? 'Default Username');
+const balance = 100;
+const bonus = 90;
+const isBanned = false;
+const isExist = false;
+const isSelling = true;
 
+const result = (balance > 1000 || bonus > 100) && !isBanned && !isExist && isSelling;
 
+console.log(result ? 'Может купить' : 'Не может купить');
