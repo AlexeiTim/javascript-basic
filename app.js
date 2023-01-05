@@ -1,11 +1,12 @@
 function powerOfTwo(num) {
+  console.log(num);
   return num * num;
-};
+}
 
 console.log(powerOfTwo(5));
 
-const poft = function (num) {
+const poft = num => {
+  console.log(num);
   return num * num;
-};
-
+}
 console.log(poft(6))
