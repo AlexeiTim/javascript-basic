@@ -1,21 +1,11 @@
-'use strict';
+'use strict'
+let myCoolVariable = 1;
 
-const user = {
-  name: 'Anton',
-  id: 1,
-  roles: ['Admin']
+if (true) {
+  myCoolVariable = 3;
+  function a() {
+    console.log(a);
+  }
 }
-// const newUser = Object.assign({}, user);
-// user.name = 'NewUser';
-// console.log(user);
-// console.log(newUser);
-
-
-
-const newUser2 = {
-  ...user,
-}
-newUser2.name = 'NewUser';
-newUser2.roles.push('User');
-console.log(user);
-console.log(newUser2);
+console.log(a());
+console.log(myCoolVariable)
