@@ -1,23 +1,20 @@
-const users = ['Аня', 'Вика', 'Катя'];
-console.log(users);
-users[2] = 'Кристина';
-console.log(users);
+const roles = ['user', 'admin', 'manager', 'admin'];
 
-const arrLength = users.push('Никита');
-console.log(users);
-console.log(arrLength);
+const elIndex = roles.indexOf('admin');
+console.log(elIndex);
 
+const elLastIndex = roles.lastIndexOf('admin');
+console.log(elLastIndex);
 
-users.unshift('Вася');
-
-console.log(users);
+if (roles.indexOf('admin') != -1) {
+  console.log('Доступ есть')
+}
 
 
-const el = users.pop();
-console.log(el);
-console.log(users);
+console.log(roles.includes('admin'));
+console.log(roles.includes('asdasd'));
 
-const el2 = users.shift();
-console.log(el2);
-console.log(users)
 
+if (roles.includes('admin')) {
+  console.log('Доступ есть')
+}
