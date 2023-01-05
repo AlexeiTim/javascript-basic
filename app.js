@@ -1,25 +1,17 @@
-'use strict';
-console.log(name)
-const user = {
-  firstName: 'Вася',
-  lastName: 'Пупкин',
-  age: 20,
-  getUserInfoArrow: () => {
-    console.log(`${this.firstName} ${this.lastName}`)
-  },
-  getUserInfo: function () {
-    console.log(`${this.firstName} ${this.lastName}`)
+'use strict'
 
-    const canDrink = () => {
-      if (this.age >= 18) {
-        console.log(this.age)
-        console.log('Может уже пить')
-      } else {
-        console.log('Не может пить!')
-      }
-    }
-    canDrink();
-  }
+// let, vat, const, func, arguments
+// Scope chain
+// this
+
+function sumNum(num1, num2) {
+  console.log(arguments);
+  return num1 + num2;
 }
-user.getUserInfo();
-// user.getUserInfoArrow();
+
+const sumNumArrow = (num1, num2) => {
+  // console.log(arguments); // нету this и arguments
+  return num1 + num2;
+}
+console.log(sumNumArrow(1, 3))
+console.log(sumNum(1, 4, 3, 7));
