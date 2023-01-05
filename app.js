@@ -1,25 +1,17 @@
-const value = prompt('Сколько будет 7 + или - 15?');
+const isAdmin = true;
+const canWrite = true;
 
-switch (true) {
-  case Number(value) === 22:
-  case Number(value) === -8:
-  case value === 'Я не робот':
-    console.log('Успех');
-    break
-  default:
-    console.log('Вы робот');
-}
+console.log(`Системный файл ${isAdmin && canWrite}`);
+console.log(`Обычный файл ${isAdmin || canWrite}`);
+console.log(`Инвентируем права админа ${!isAdmin}`);
 
-if (value === 'Я не робот') {
-  console.log('Успех')
-} else {
-  const numValue = Number(value)
-  switch (numValue) {
-    case 22:
-    case -8:
-      console.log('Успех')
-      break
-    default:
-      console.log('Вы робот');
-  }
+const isEdited = true;
+const isSuperAdmin = true;
+
+console.log(`Файл с редактированием ${isAdmin && canWrite && (!isEdited || isSuperAdmin)
+  }`)
+
+let a = 7;
+if (a === -8 || a === 22 ) {
+  console.log('Я не робот');
 }
