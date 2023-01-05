@@ -1,23 +1,16 @@
-const users = [
-  {
-    name: 'Вася',
-    surname: 'Пупкин',
-    age: 30,
-    skills: ['Разработка', 'DevOps'],
-  },
-  {
-    name: 'Катя',
-    surname: 'Белова',
-    age: 30,
-    skills: ['Дизайн'],
+const user2 = {
+  name: 'Вася',
+  surname: 'Пупкин',
+  age: 24,
+  getFullName: function () {
+    return this.name + ' ' + this.surname;
   }
-];
+};
 
-const res = users
-  .map(user => {
-    return {
-      fullName: `${user.name} ${user.surname}`,
-      skills: user.skills.length,
-    }
-  });
-console.log(res);
+console.log(user2.getFullName())
+
+
+const arr = [2, 1];
+arr.sort();
+console.log(arr);
+console.log('232323'.toLowerCase())
