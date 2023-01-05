@@ -6,5 +6,19 @@ const user = {
   skills: [
     'Программирование', 'Готовка'
   ],
-  1: 1,
+  eduBasic: 'Школа 10',
+  eduPro: 'МФТИ',
 };
+console.log(user);
+console.log(user.skills);
+const level = 'Pro';
+console.log(user['edu' + level]);
+console.log(user[`edu${level}`]);
+user.city = 'Москва';
+user['city'] = 'Москва';
+console.log(user);
+
+user.age = 30;
+user['age'] = 35;
+
+console.log(user);
