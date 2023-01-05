@@ -1,29 +1,24 @@
-const age = 25;
-const haveJob = false;
-const money = 2000;
+const role1 = 'admin';
+const role2 = 'user';
+const role3 = 'superuser';
 
-const priceMacBook = 2000;
+const roles = ['admin', 'user', 'superuser'];
+const userInfo = ['Алексей', 25];
 
+console.log(roles);
+console.log(roles[0]);
 
-function canGetCredit(age, job = false) {
-  const countCredit = age > 24 && job
-    ? 500
-    : age > 24
-      ? 100
-      : 0;
-  return countCredit;
+console.log(roles[roles.length - 1]);
+console.log(roles.at(-1));
+
+const usersAge = [2040 - 2022, 10 < 0 ? 5 : 0];
+console.log(usersAge);
+
+const userNames = new Array('Вася', 'Петя', 'Катя');
+console.log(userNames);
+
+function square(el) {
+  return el + el;
 };
 
-function canBuyMacBook(money, price) {
-  const checking = money >= price ? true : false;
-  return checking;
-}
-
-function tryToGetMacBook(age, money, priceMacBook, haveJob = false) {
-  const additionalMoney = canGetCredit(age, haveJob);
-  const allMoney = money + additionalMoney;
-  return canBuyMacBook(allMoney, priceMacBook);
-};
-
-
-console.log(tryToGetMacBook(age, money, priceMacBook, haveJob));
+console.log(square([1, 2, 3]))
