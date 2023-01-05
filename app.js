@@ -1,34 +1,25 @@
 'use strict';
-
-
-function addNum(num1, num2) {
-  console.log(this);
-  return num1 + num2
-}
-
-const addNum2 = (num1, num2) => {
-  return num1 + num2
-}
-
+console.log(name)
 const user = {
-  name: 'Вася',
-  surname: 'Пупкин',
-  getFullName: function () {
-    console.log(this)
-    return this.name + ' ' + this.surname;
+  firstName: 'Вася',
+  lastName: 'Пупкин',
+  age: 20,
+  getUserInfoArrow: () => {
+    console.log(`${this.firstName} ${this.lastName}`)
+  },
+  getUserInfo: function () {
+    console.log(`${this.firstName} ${this.lastName}`)
+
+    const canDrink = () => {
+      if (this.age >= 18) {
+        console.log(this.age)
+        console.log('Может уже пить')
+      } else {
+        console.log('Не может пить!')
+      }
+    }
+    canDrink();
   }
 }
-
-user.getFullName();
-
-const user2 = {
-  name: 'Марина',
-  surname: 'Катц',
-}
-
-user2.getFullName = user.getFullName;
-
-user2.getFullName();
-
-const getFullName = user2.getFullName;
-getFullName();
+user.getUserInfo();
+// user.getUserInfoArrow();
