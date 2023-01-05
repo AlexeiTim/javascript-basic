@@ -1,8 +1,8 @@
-const arr = [2, 4, 4, 10, 20];
-
-const checkElement = (value, arr) => {
-  let result = arr.find(el => el == value);
-  return result == undefined ? false : true;
-}
-
-console.log(arr.some(el => el === 2))
+const prices = [[2, [3, [2, 3]]], [3, 4], [10, 20]];
+const result = prices.flat(Infinity);
+const res2 = prices.flatMap(el => {
+  return el.concat([1]);
+})
+// const resultFlatMap = prices.flatMap(1);
+console.log(result)
+// console.log(resultFlatMap)
