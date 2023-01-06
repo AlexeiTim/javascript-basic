@@ -18,50 +18,19 @@ function submitForm() {
 
 
 }
-
-
 function inputChanged(e) {
   if (e.code === 'Enter') {
     submitForm();
   }
 }
-// document.querySelector('.input').addEventListener('keydown', (e) => {
-//   if (e.code === 'Enter') {
-//     submitForm()
-//   }
-// })
+
+localStorage.setItem('token', 'asdasd');
+localStorage.setItem('token1', 1);
+localStorage.setItem('token1', true);
+const token1 = localStorage.getItem('token1');
+console.log(typeof token1);
+localStorage.removeItem('token1');
+localStorage.clear();
 
 
-// ; (function () {
-//   const firstAndSecondElement = document.querySelectorAll('.one');
-//   firstAndSecondElement.forEach(item => {
-//     console.log(item.firstChild.nextSibling.textContent);
-//   })
-//   const threeElement = document.querySelector('#two');
-//   console.log(threeElement.textContent.trim())
-//   const spanElements = document.querySelectorAll('span');
-//   spanElements.forEach(el => {
-//     if (el.getAttribute('user-id')) {
-//       console.log(el.textContent);
-//     }
-//   })
-// })()
 
-// console.log(document.querySelector('.one').innerText)
-// console.log(document.querySelector('.one ~ div').innerText);
-// console.log(document.querySelectorAll('.one')[0].innerText);
-// console.log(document.querySelectorAll('.one')[1].innerText);
-
-// console.log(document.querySelector('#two').innerText);
-
-// console.log(document.getElementById('two').innerText);
-// console.log(document.querySelector('[user-id="4"]').innerText);
-
-const panelText = 'Панель';
-const panelClass = 'button';
-const newElement = document.createElement('div');
-newElement.setAttribute('user-id', 1);
-newElement.classList.add('panel');
-// newElement.innerText = 'Кнопка';
-newElement.innerHTML = `<button class='${panelClass}'>${panelText}</button>`
-document.querySelector('.test').append(newElement);
