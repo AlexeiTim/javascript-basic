@@ -1,5 +1,12 @@
-console.log(document);
+'use strict'
 
-let panelText = document.querySelector('.panel').innerHTML;
-document.querySelector('.panel').innerHTML = 'New Text';
-document.querySelector('.input').value = 'Text';
+// document.querySelector('.button').addEventListener('click', changeClick)
+
+function changeClick() {
+  const input = document.querySelector('.input').value;
+  if (!input) {
+    return
+  }
+  document.querySelector('.panel').innerText = input;
+  document.querySelector('.input').value = '';
+}
