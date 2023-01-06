@@ -1,0 +1,12 @@
+{
+  "key": "string",
+  "num": 5,
+  "bool": false,
+  "arr": [
+    "s",
+    "d"
+  ],
+  "obj": {
+    "innerKey": "3"
+  }
+}
