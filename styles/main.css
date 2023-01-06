@@ -241,6 +241,105 @@ input.error {
 
 .button:hover {
   background: #dcdaff;
+}
+
+.cover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cover_hidden {
+  /* display: none; */
+}
+
+.popup {
+  background: #FFFFFF;
+  box-shadow: 0px 8px 14px 12px rgba(56, 56, 56, 0.05);
+  border-radius: 10px;
+  max-width: 60%;
+  width: 100%;
+  padding: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.popup__close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+h2 {
+  font-size: 24px;
+  line-height: 27px;
+}
+
+.icon-label {
+  font-size: 14px;
+  line-height: 16px;
+  color: #768396;
+  margin-bottom: 10px;
+}
+
+.icon-select {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 10px;
+}
+
+.icon {
+  border: 1px solid #5051F9;
+  border-radius: 14px;
+  height: 45px;
+  width: 45px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: inherit;
+}
+
+.icon:hover {
+  background: #6A6AFB;
+  box-shadow: 0px 8px 14px rgba(62, 107, 224, 0.12);
+
+}
+
+.icon:hover img {
+  filter: brightness(0) invert(1)
+}
 
 
+.icon_active {
+  background: #5051F9;
+  border-radius: 14px;
+}
+
+.icon_active img {
+  filter: brightness(0) invert(1)
+}
+
+.popup__form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.popup__form button {
+  width: 50%;
+  margin: 0 auto;
 }

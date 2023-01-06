@@ -74,7 +74,6 @@ function rerenderHead(activeHabbit) {
 }
 
 function rerenderContent(activeHabbit) {
-  console.log(activeHabbit);
   page.content.daysContainer.innerHTML = '';
   for (const index in activeHabbit.days) {
     let i = Number(index);
@@ -87,7 +86,6 @@ function rerenderContent(activeHabbit) {
     </button>`
     page.content.daysContainer.appendChild(element);
   }
-  console.log(activeHabbit.days);
   page.content.nextDay.innerHTML = `День ${activeHabbit.days.length + 1}`;
 
 }
@@ -132,7 +130,6 @@ function deleteDay(index) {
       habbit.days.splice(index, 1);
       return {
         ...habbit,
-        days: habbit.days
       };
     }
     return habbit
