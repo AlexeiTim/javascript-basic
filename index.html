@@ -28,7 +28,7 @@
                         <img class="menu__img" src="./images/meel.svg" alt="Dumbbell" menu-habbit-id="3">
                     </button> -->
                 </div>
-                <button class="menu__add">
+                <button class="menu__add" onclick="togglePopup()">
                     <img src="./images/Add.svg" alt="add">
                 </button>
             </nav>
@@ -58,7 +58,7 @@
                 </div>
         </div>
         </main>
-        <div class="cover cover_hidden">
+        <div class="cover cover_hidden" id="add-habbit-popup">
             <div class="popup">
                 <h2>Новая привычка</h2>
                 <div class="icon-label">Иконка</div>
@@ -79,7 +79,7 @@
                     <input type="number" name="target" placeholder="Цель">
                     <button class="button" type="submit">Добавить</button>
                 </form>
-                <button class="popup__close">
+                <button class="popup__close" onclick="togglePopup()">
                     <img src="./images/close.svg" alt="close">
                 </button>
             </div>
