@@ -131,10 +131,11 @@ h1 {
   position: absolute;
   top: 0;
   left: 0;
-  width: 80%;
+  /* width: 80%; */
   background: #5051F9;
   border-radius: 4px;
   height: 5px;
+  transition: all 0.5s;
 }
 
 main {

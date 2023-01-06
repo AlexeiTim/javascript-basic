@@ -5,7 +5,12 @@ const HABBIT_KEY = 'HABBIT_KEY'
 
 /* page */
 const page = {
-  menu: document.querySelector('.menu__list')
+  menu: document.querySelector('.menu__list'),
+  header: {
+    h1: document.querySelector('.h1'),
+    progressProcent: document.querySelector('.progress__procent'),
+    progressCoverBar: document.querySelector('.progress__cover-bar')
+  }
 }
 
 /* utils */
@@ -44,9 +49,7 @@ function rerenderMenu(activeHabbit) {
       page.menu.appendChild(element);
       continue
     }
-    console.log(activeHabbit);
     if (activeHabbit.id === habbit.id) {
-
       existed.classList.add('menu__item_active');
     } else {
       existed.classList.remove('menu__item_active');
@@ -55,9 +58,22 @@ function rerenderMenu(activeHabbit) {
   }
 }
 
+function rerenderHead(activeHabbit) {
+  if (!activeHabbit) {
+    return
+  }
+  page.header.h1.innerHTML = activeHabbit.name;
+  const progress = activeHabbit.days.length / activeHabbit.target > 1
+    ? 100
+    : activeHabbit.days.length / activeHabbit.target * 100;
+  page.header.progressProcent.innerText = progress.toFixed(0) + '%';
+  page.header.progressCoverBar.setAttribute('style', `width: ${progress}%`)
+}
+
 function rerender(activeHabbitId) {
   const activeHabbit = habbits.find(el => el.id === activeHabbitId)
   rerenderMenu(activeHabbit);
+  rerenderHead(activeHabbit);
 }
 // init
 ; (() => {
