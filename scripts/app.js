@@ -1,7 +1,8 @@
 'use strict'
 
 let habbits = [];
-const HABBIT_KEY = 'HABBIT_KEY'
+const HABBIT_KEY = 'HABBIT_KEY';
+let globalActiveHabbitId;
 
 /* page */
 const page = {
@@ -90,6 +91,7 @@ function rerenderContent(activeHabbit) {
 }
 
 function rerender(activeHabbitId) {
+  globalActiveHabbitId = activeHabbitId;
   const activeHabbit = habbits.find(el => el.id === activeHabbitId)
   if (!activeHabbit) {
     return;
@@ -100,9 +102,25 @@ function rerender(activeHabbitId) {
 }
 
 function addDays(event) {
+  const form = event.target;
   event.preventDefault();
   const data = new FormData(event.target);
-  
+  const comment = data.get('comment');
+  form['comment'].classList.remove('error');
+  if (!comment) {
+    form['comment'].classList.add('error');
+  }
+  habbits = habbits.map(habbit => {
+    if (habbit.id === globalActiveHabbitId) {
+      return {
+        ...habbit,
+        days: habbit.days.concat([{ comment }])
+      }
+    }
+    return habbit
+  })
+  form['comment'].value = '';
+  rerender(globalActiveHabbitId)
 }
 // init
 ; (() => {

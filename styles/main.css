@@ -199,14 +199,21 @@ input {
   font-size: 16px;
   line-height: 18px;
   color: #23235F;
-
-
 }
 
 input::placeholder {
   font-size: 14px;
   line-height: 16px;
   color: #8899A8;
+}
+
+input.error:focus {
+  outline: none;
+  border: 1px solid red;
+}
+
+input.error {
+  border: 1px solid red;
 }
 
 .input_icon {
