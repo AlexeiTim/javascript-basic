@@ -199,7 +199,7 @@ function rerender(activeHabbitId) {
   if (!activeHabbit) {
     return;
   }
-  console.log(activeHabbit);
+  document.location.replace(document.location.pathname + '#' + activeHabbitId);
   rerenderMenu(activeHabbit);
   rerenderHead(activeHabbit);
   rerenderContent(activeHabbit);
@@ -207,5 +207,13 @@ function rerender(activeHabbitId) {
 // init
 ; (() => {
   loadData();
-  rerender(habbits[0].id);
+  const hashId = Number(document.location.hash.replace('#', ''));
+  console.log(hashId)
+  const urlHabbitId = habbits.find(habbit => habbit.id == hashId);
+  console.log(urlHabbitId);
+  if (urlHabbitId) {
+    rerender(urlHabbitId.id);
+  } else {
+    rerender(habbits[0].id)
+  }
 })()
