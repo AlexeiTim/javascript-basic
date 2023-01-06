@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "icon": "sport",
+    "icon": "Dumbbell",
     "name": "Отжимания",
     "target": 10,
     "days": [
@@ -16,6 +16,17 @@
   {
     "id": 2,
     "icon": "food",
+    "name": "Правильное питание",
+    "target": 10,
+    "days": [
+      {
+        "comment": "Круто!"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "icon": "water",
     "name": "Правильное питание",
     "target": 10,
     "days": [
