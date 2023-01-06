@@ -7,6 +7,16 @@ function submitForm() {
     return
   }
   document.querySelector('.panel').innerText = input;
+
+  const obj = JSON.stringify({
+    text: input
+  });
+
+  localStorage.setItem("text", obj);
+
+
+
+
   document.querySelector('.input').value = '';
   document.querySelector('.notification').classList.add('notification_active')
   console.log(document.querySelector('.notification').getAttribute('class'))
@@ -24,9 +34,5 @@ function inputChanged(e) {
   }
 }
 
-const obj = JSON.parse('{"a" : 1}');
-console.log(obj.a);
-const str = JSON.stringify(obj);
-console.log(str);
 
 
