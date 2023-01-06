@@ -2,42 +2,74 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles/main.css">
-  <title>Hobby App</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/main.css">
+    <title>Hobby App</title>
 </head>
 
 <body>
-  <div class="app">
-    <div class="panel">
-      <img class="logo" src="./images//logo.svg" alt="logo">
-      <nav class="menu">
-        <div class="menu__list">
-          <button class="menu__item menu__item_active">
-            <img class="menu__img" src="./images/Dumbbell.svg" alt="Dumbbell">
-          </button>
-          <button class="menu__item">
-            <img class="menu__img" src="./images/water.svg" alt="Dumbbell">
-          </button>
-          <button class="menu__item">
-            <img class="menu__img" src="./images/meel.svg" alt="Dumbbell">
-          </button>
+    <div class="app">
+        <div class="panel">
+            <img class="logo" src="./images//logo.svg" alt="logo">
+            <nav class="menu">
+                <div class="menu__list">
+                    <button class="menu__item menu__item_active">
+                        <img class="menu__img" src="./images/Dumbbell.svg" alt="Dumbbell">
+                    </button>
+                    <button class="menu__item">
+                        <img class="menu__img" src="./images/water.svg" alt="Dumbbell">
+                    </button>
+                    <button class="menu__item">
+                        <img class="menu__img" src="./images/meel.svg" alt="Dumbbell">
+                    </button>
+                </div>
+                <button class="menu__add">
+                    <img src="./images/Add.svg" alt="add">
+                </button>
+            </nav>
         </div>
-        <button class="menu__add">
-          <img src="./images/Add.svg" alt="add">
-        </button>
-      </nav>
+        <div class="content">
+            <header>
+                <h1>Отжимания</h1>
+                <div class="progress">
+                    <div class="progress__text">
+                        <div class="progress__name">Прогресс</div>
+                        <div class="progress__procent">80%</div>
+                    </div>
+                    <div class="progress__bar">
+                        <div class="progress__cover-bar"></div>
+                    </div>
+                </div>
+            </header>
+            <main>
+                <div>
+                    <div class="habbit">
+                        <div class="habbit__day">День 1</div>
+                        <div class="habbit__comments">Комментарий первого дня</div>
+                        <div class="habbit__delete">
+                            <img src="./images/delete.svg" alt="delete">
+                        </div>
+
+                    </div>
+
+                    <div class="habbit">
+                        <div class="habbit__day">День 2</div>
+                        <div class="habbit__form">
+                            <input class="input_icon" type="text" placeholder="Комментарий">
+                            <img class="input__icon" src="./images/comment.svg" alt="comment">
+                            <button class="button">Готово</button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
     </div>
-    <div class="content">
-      asd
-    </div>
-  </div>
-  <script src="./scripts/app.js"></script>
+    <script src="./scripts/app.js"></script>
 </body>
 
 </html>
