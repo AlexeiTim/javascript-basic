@@ -18,6 +18,8 @@ const page = {
   }
 }
 
+
+
 /* utils */
 
 function loadData() {
@@ -61,58 +63,6 @@ function rerenderMenu(activeHabbit) {
   }
 }
 
-
-
-// function rerenderBody(activeHabbit) {
-
-//   let comments = activeHabbit.days
-//   let count = 1;
-//   page.body.bodyBlock.innerHTML = '';
-//   for (const comment of comments) {
-//     console.log(comment);
-
-//     let existed = document.querySelector(`[habbit-id="${count}"]`);
-//     if (!existed) {
-//       // создать
-//       let element = document.createElement('div');
-//       element.classList.add('habbit');
-//       element.setAttribute('habbit-id', `${count}`)
-//       element.innerHTML = `
-//       <div class="habbit__day">День ${count}</div>
-//                         <div class="habbit__comments">${comment.comment}</div>
-//                         <div class="habbit__delete">
-//                             <img src="./images/delete.svg" alt="delete">
-//                         </div>
-//                         `
-//       count++
-//       console.log(count);
-//       page.body.bodyBlock.append(element);
-//       continue
-//     }
-
-//     if (activeHabbit.id === count) {
-//     }
-//   }
-//   let exictedComment = document.querySelector(`[comment='${count}']`);
-//   if (!exictedComment) {
-//     console.log(exictedComment);
-//     let commentElement = document.createElement('div');
-//     commentElement.classList.add('habbit');
-//     commentElement.setAttribute('habbit-id', `${count}`)
-//     commentElement.innerHTML =
-//       `
-//   <div class="habbit__day" habbit-id="${count}">День ${count}</div>
-//                         <div class="habbit__form">
-//                             <input class="input_icon" type="text" placeholder="Комментарий">
-//                             <img class="input__icon" src="./images/comment.svg" alt="comment">
-//                             <button class="button">Готово</button>
-//                         </div>
-//   `
-//     page.body.bodyBlock.append(commentElement);
-//   }
-// }
-
-
 function rerenderHead(activeHabbit) {
   page.header.h1.innerHTML = activeHabbit.name;
   const progress = activeHabbit.days.length / activeHabbit.target > 1
@@ -136,7 +86,7 @@ function rerenderContent(activeHabbit) {
     page.content.daysContainer.appendChild(element);
   }
   page.content.nextDay.innerHTML = `День ${activeHabbit.days.length + 1}`;
-  
+
 }
 
 function rerender(activeHabbitId) {
@@ -147,6 +97,12 @@ function rerender(activeHabbitId) {
   rerenderMenu(activeHabbit);
   rerenderHead(activeHabbit);
   rerenderContent(activeHabbit);
+}
+
+function addDays(event) {
+  event.preventDefault();
+  const data = new FormData(event.target);
+  
 }
 // init
 ; (() => {
